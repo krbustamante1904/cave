@@ -1,0 +1,123 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Header estilo base */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 20px;
+    background: #333;
+    color: white;
+}
+
+/* Logo */
+.logo img {
+    height: 50px;
+}
+
+/* Menú en escritorio */
+nav.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Botones en escritorio */
+.buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.buttons button {
+    padding: 8px 15px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.login {
+    background: #555;
+    color: white;
+}
+
+.register {
+    background: #007bff;
+    color: white;
+}
+
+/* Ocultar el checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Icono de menú */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Responsive: Tablet y Móvil */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Centrar logo */
+    .logo {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    /* Mostrar icono de menú */
+    .menu-icon {
+        display: block;
+    }
+
+    /* Ocultar menú y botones */
+    .menu, .buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        background: #444;
+        padding: 15px 0;
+        transition: left 0.4s ease-in-out;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .buttons {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    /* Cuando el checkbox está activado, mostrar menú */
+    .menu-toggle:checked ~ .menu,
+    .menu-toggle:checked ~ .buttons {
+        left: 0;
+    }
+}
