@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header con Menú</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <!-- Logo -->
+        <div class="logo">MiLogo</div>
+
+        <!-- Menú de navegación (pantallas grandes) -->
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+
+            <!-- Botones de sesión -->
+            <div class="session-buttons">
+                <button class="session-btn">Iniciar sesión</button>
+                <button class="session-btn">Registrarse</button>
+            </div>
+        </nav>
+
+        <!-- Icono del menú (solo para pantallas pequeñas) -->
+        <div id="menu-icon" class="menu-icon">&#9776;</div>
+    </header>
+
+    <!-- Menú lateral (pantallas pequeñas) -->
+    <div id="menu" class="menu">
+        <nav>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+                <li><button class="session-btn">Iniciar sesión</button></li>
+                <li><button class="session-btn">Registrarse</button></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div id="content" class="content">
+        <!-- Aquí va el contenido que se verá detrás del menú con el blur -->
+        <p>Este es el contenido de la página. El contenido será desenfocado cuando el menú esté abierto.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
